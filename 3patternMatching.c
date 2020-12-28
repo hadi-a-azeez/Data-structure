@@ -1,7 +1,7 @@
 //3. Implement pattern matching algorithm
 
-/* #include <stdio.h>
-#include <string.h> */
+#include <stdio.h>
+#include <string.h>
 
 int match(char [], char []);
 

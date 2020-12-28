@@ -1,9 +1,9 @@
 //9. create a singly linked list of n nodes and display it
 
 
-/* #include <stdio.h>
+#include <stdio.h>
 #include <conio.h>
-#include <stdlib.h> */
+#include <stdlib.h>
 
 struct node{
     int data;
@@ -26,10 +26,22 @@ void creatNode(){
             current->next = newnode;
             current = newnode;
         }
-        printf("Do you want to add another item to the list? (y,n)");
+        printf("Do you want to add another item to the list? (y,n)\n");
         ch = getch();
-        //scanf("%c",&ch);
     }while(ch!='n');
+    printf("Do you want to display linked list? (y,n)\n");
+    ch = getch();
+    if(ch == 'y'){
+        current = head;
+        while (current)
+        {
+            printf("%d->",current->data);
+            current = current->next;
+        }
+      printf("null");
+        
+    }
+    else return;
     getch();
 }
 

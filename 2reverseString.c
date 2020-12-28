@@ -1,7 +1,7 @@
 //2. Reverse a string using pointer
 
-/* #include <stdio.h>
-#include <string.h> */
+#include <stdio.h>
+#include <string.h>
 
 void reverse(char * pString){
     char * pStart = pString; //first

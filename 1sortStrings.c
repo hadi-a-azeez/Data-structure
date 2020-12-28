@@ -1,7 +1,7 @@
 //1. Sort a given list of strings
 
-/* #include <stdio.h>
-#include <string.h> */
+#include <stdio.h>
+#include <string.h>
 
 int main(){
     char str[20][25];

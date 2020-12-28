@@ -1,6 +1,6 @@
 //4. Search an element in the 2-dimensional array
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int main(){
     int row,column,i,j,searchElem,count = 0;

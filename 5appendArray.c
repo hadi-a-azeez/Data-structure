@@ -1,8 +1,7 @@
 // Merge two Arrays in C
-// ---codescracker.com---
 
-/* #include<stdio.h>
-#include<conio.h> */
+#include<stdio.h>
+#include<conio.h>
 int main()
 {
     int arr1[50], arr2[50], size1, size2, i, k, merge[100];

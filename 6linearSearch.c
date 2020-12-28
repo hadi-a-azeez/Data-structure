@@ -1,7 +1,7 @@
 //6. Search element in the array using linear search
 
 
-//#include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
