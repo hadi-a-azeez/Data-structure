@@ -47,7 +47,8 @@ void insertRandom(){
     struct node *newnode,*temp;
     int pos,i=0,item;
     newnode = (struct node*) malloc(sizeof(struct node));
-    if(newnode = NULL){
+    temp = (struct node*) malloc(sizeof(struct node));
+    if(newnode == NULL){
         printf("overflow");
     }
     else{
@@ -57,16 +58,14 @@ void insertRandom(){
         printf("\nEnter the location after which you want to insert: ");
         scanf("%d",&pos);
         temp = head;
-        while(i<pos) 
-        {  
-            temp = temp->next;  
+        for(i = 0; i<pos; i++){ 
             if(temp == NULL)  
             {  
                 printf("\ncan't insert\n");  
                 return;  
-            }        
-            i++;    
-        }  
+            }  
+             temp = temp->next; 
+        }
         newnode->next = temp->next;
         temp->next = newnode;
         printf("Inserted at %d",pos);

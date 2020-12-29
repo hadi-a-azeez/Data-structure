@@ -1,4 +1,5 @@
 //18. Implement Queue using array. 
+//if(rear == capacity) printf("overflow")
 
 #include <stdio.h>
 #include <stdlib.h>
