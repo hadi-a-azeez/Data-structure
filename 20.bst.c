@@ -76,6 +76,32 @@ struct node* searchBts(int item){
     return current;
 }
 
+void display(){
+    struct node *current = root;
+    //displaying right side
+    while(current != NULL){
+        printf(" %d",current->data);
+        //going to right
+        if(current->rightChild != NULL){
+            current = current->rightChild;
+        }
+        else{
+            current = NULL;
+        }  
+    }
+    //displaying left side
+    current = root;
+    while(current != NULL){
+        if(current->leftChild != NULL){
+            current = current->leftChild;
+            printf(" %d",current->data);
+        }
+        else{
+            current = NULL;
+        }
+    }
+}
+
 int main(){
     int data,item;
     struct node *result;
@@ -105,12 +131,12 @@ int main(){
                 printf("\n item present in bst");
             }
             break; 
-       /*  case 3:
+        /* case 3:
             insertRandom();
-            break;
+            break; */
         case 4:
             display();
-            break; */
+            break;
         case 5:
             return(0);
             break;
