@@ -102,6 +102,26 @@ void display(){
     }
 }
 
+void inorder(struct node *current){
+    if(current == NULL) return;
+    inorder(current->leftChild);
+    printf("%d ",current->data);
+    inorder(current->rightChild);
+}
+
+void preorder(struct node *current){
+    if(current == NULL) return;
+    printf("%d ",current->data);
+    inorder(current->leftChild);
+    inorder(current->rightChild);
+}
+void postorder(struct node *current){
+    if(current == NULL) return;
+    inorder(current->leftChild);
+    inorder(current->rightChild);
+    printf("%d ",current->data);
+}
+
 int main(){
     int data,item;
     struct node *result;
@@ -110,7 +130,7 @@ int main(){
     while(choice != 5){
         printf("\n\nChoose from menu\n");
         printf("-----------------\n");
-        printf("1. Insert to bts\n2. Search in bts\n3.Insert at random position\n4. Display\n5. Exit\n");
+        printf("1.Insert to bts\n2.Search in bts\n3.Inorder\n4.Preorder\n5.Postorder\n6.Display\n7.Exit\n");
         printf("Select a option:");
         scanf("%d",&choice);
         switch (choice)
@@ -131,13 +151,19 @@ int main(){
                 printf("\n item present in bst");
             }
             break; 
-        /* case 3:
-            insertRandom();
-            break; */
+        case 3:
+            inorder(root);
+            break;
         case 4:
-            display();
+            preorder(root);
             break;
         case 5:
+            postorder(root);
+            break;
+        case 6:
+            display();
+            break;
+        case 7:
             return(0);
             break;
         
